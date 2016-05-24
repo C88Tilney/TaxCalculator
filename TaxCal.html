@@ -3,14 +3,73 @@
     <head>
     
     <title>Tax Calculator</title>
-    
+        
+        <script>  
+ 
+        </script>
     </head>
     
+    <!-- ***************************** -->
+    
     <body>
-        <h1>Tax Calculator</h1>
-        <p>Gross Income </p><input>
-    
-    
+        <div class="title">
+            <h1>Tax Calculator</h1>
+        </div>
+    <!-- ***************************** -->
+        <div class="input">
+            <p>Please Enter Your Salary per year</p><input id="salary" type="number">
+            <button onclick="myFunction()">Calculate Tax</button>
+        </div>
+    <!-- ***************************** -->
+        <div class="tax-bands">
+            <h2>Tax Bands</h2>
+                <table>
+                    <tr>
+                        <th>Band</th>
+                        <th>Taxable Income</th>
+                        <th>Tax Rate</th>
+                    </tr>
+                    <tr>
+                        <td>Personal Allowance</td>
+                        <td>Up to &pound;11,000</td>
+                        <td>0%</td>
+                    </tr>
+                    <tr>
+                        <td>Basic</td>
+                        <td>&pound;11,000 to &pound;43,000</td>
+                        <td>20%</td>
+                    </tr>
+                    <tr>
+                        <td>Higher Rate</td>
+                        <td>&pound;43,000 to &pound;150,000</td>
+                        <td>40%</td>
+                    </tr>
+                    <tr>
+                        <td>Additional rate</td>
+                        <td>Over &pound;150,000</td>
+                        <td>45%</td>
+                    </tr>
+            </table>
+        </div>    
+        
+     <!-- ***************************** -->
+        
+        <div class="output">
+            <h2>Tax Calculated</h2>
+                <p>Total tax paid per year</p><p id="YearlyTax"></p>
+                
+        
+        </div>
+        
     </body>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementsById("salary")
+            
+        }
+        document.getElementById("YearlyTax") = myFunction();
+    
+    </script>
 
 </html>
