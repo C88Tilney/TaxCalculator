@@ -1,12 +1,12 @@
 <!DOCTYPE>
 <html lang="en">
     <head>
+        <title>Tax Calculator</title>
+           
+    <!-- My Custom CSS -->
+        <link href="taxCal.css" rel="stylesheet">
     
-    <title>Tax Calculator</title>
         
-        <script>  
- 
-        </script>
     </head>
     
     <!-- ***************************** -->
@@ -16,9 +16,12 @@
             <h1>Tax Calculator</h1>
         </div>
     <!-- ***************************** -->
+        
         <div class="input">
-            <p>Please Enter Your Salary per year</p><input id="salary" type="number">
-            <button onclick="myFunction()">Calculate Tax</button>
+            <h2>Income Tax</h2>
+                <p>Please Enter Your Salary per year </p>
+            <input id="salary" type="number">
+            <button id="calculate">Calculate Tax</button>
         </div>
     <!-- ***************************** -->
         <div class="tax-bands">
@@ -56,20 +59,14 @@
         
         <div class="output">
             <h2>Tax Calculated</h2>
-                <p>Total tax paid per year</p><p id="YearlyTax"></p>
-                
-        
+                <p>Total tax paid per year &pound;</p>
+                <p id="yearlyTax"></p>
+            
         </div>
         
     </body>
     
-    <script>
-        function myFunction() {
-            var x = document.getElementsById("salary")
-            
-        }
-        document.getElementById("YearlyTax") = myFunction();
-    
-    </script>
+    <script src="taxCalculator.js"></script>
+        
 
 </html>
