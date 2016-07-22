@@ -1,30 +1,44 @@
 // js code for tax on your salary income
 
 document.getElementById("calculate").addEventListener("click", function tax() {
-  var grossSalary = parseInt(document.getElementById("salary").value);
+    
+    var x = parseInt(document.getElementById("income").value);
+    console.log(x);
+    "use strict";
 
-  if (grossSalary < 0) {
-    document.getElementById("yearlyTax").innerHTML = "You owe someone money!";
-  }
 
-  if (grossSalary >= 0 && grossSalary < 11000) {
-    document.getElementById("yearlyTax").innerHTML = "You pay no tax";
-  }
+    if (x < 0) {
+        money = "You owe someone money!";
+    }
 
-  if (grossSalary >= 11000 && grossSalary < 43000) {
-    document.getElementById("yearlyTax").innerHTML = ((grossSalary - 11000) * 0.20);
-  }
+    else if (x >= 0 && x < 11000) {
+        money = "You pay no tax";
+    }
 
-  if (grossSalary > 43001 && grossSalary < 122000) {
-    document.getElementById("yearlyTax").innerHTML = ((grossSalary - 11000) * 0.40);
-  }
+    else if (x >= 11000 && x < 43000) {
+        money = ((x - 11000) * 0.20);
+    }
 
-  if (grossSalary > 122001 && grossSalary < 150000) {
-    document.getElementById("yearlyTax").innerHTML = (grossSalary * 0.40);
-  }
-  if (grossSalary >= 150000) {
-    var additional = (grossSalary * 0.45);
-      document.getElementById("yearlyTax").innerHTML = additional;
-  }
+    else if (x > 43001 && x < 122000) {
+        money = ((x - 11000) * 0.40);
+    }
+
+    else if (x > 122001 && x < 150000) {
+        money = (x * 0.40);
+    }
+    else if (x >= 150000) {
+        money = (x * 0.45);
+    }
+    
+    console.log(money);
+
+    document.getElementById("yearlyTax").innerHTML = money;
+    
+    var monthlyTax = (money/12);
+    var weeklyTax = (money/52);
+    
+    document.getElementById("monthlyTax").innerHTML = monthlyTax;
+    document.getElementById("weeklyTax").innerHTML = weeklyTax;
+    
 
 });

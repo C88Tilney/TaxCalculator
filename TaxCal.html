@@ -1,77 +1,77 @@
 <!DOCTYPE>
 <html lang="en">
-    <head>
-        <title>Tax Calculator</title>
-           
+
+<head>
+    <title>Tax Calculator</title>
+
     <!-- My Custom CSS -->
-        <link href="taxCal.css" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+    <link href="taxCal.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- font -->
-        <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    
-        
-    </head>
-    
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<!-- ***************************** -->
+
+<body>
+    <div class="title">
+        <h1>Tax Calculator</h1>
+    </div>
     <!-- ***************************** -->
-    
-    <body>
-        <div class="title">
-            <h1>Tax Calculator</h1>
-        </div>
+
+    <div class="input">
+        <h2>Income Tax</h2>
+        <p>Please Enter Your Salary per year </p>
+        <input id="income" type="number">
+        <input type="button" value="Calculate" id="calculate">
+    </div>
     <!-- ***************************** -->
-        
-        <div class="input">
-            <h2>Income Tax</h2>
-                <p>Please Enter Your Salary per year </p>
-            <input id="salary" type="number">
-            <button id="calculate">Calculate Tax</button>
-        </div>
+    <div class="output">
+        <h2>Tax Calculated</h2>
+        <p>Total tax per year &pound;<span id="yearlyTax"></span></p>
+        <p>Total tax per month &pound;<span id="monthlyTax"></span></p>
+        <p>Total tax per week &pound;<span id="weeklyTax"</p>
+
+    </div>
+
     <!-- ***************************** -->
-        <div class="tax-bands">
-            <h2>Tax Bands</h2>
-                <table>
-                    <tr>
-                        <th>Band</th>
-                        <th>Taxable Income</th>
-                        <th>Tax Rate</th>
-                    </tr>
-                    <tr>
-                        <td>Personal Allowance</td>
-                        <td>Up to &pound;11,000</td>
-                        <td>0%</td>
-                    </tr>
-                    <tr>
-                        <td>Basic</td>
-                        <td>&pound;11,000 to &pound;43,000</td>
-                        <td>20%</td>
-                    </tr>
-                    <tr>
-                        <td>Higher Rate</td>
-                        <td>&pound;43,000 to &pound;150,000</td>
-                        <td>40%</td>
-                    </tr>
-                    <tr>
-                        <td>Additional rate</td>
-                        <td>Over &pound;150,000</td>
-                        <td>45%</td>
-                    </tr>
-            </table>
-        </div>    
-        
-     <!-- ***************************** -->
-        
-        <div class="output">
-            <h2>Tax Calculated</h2>
-                <p>Total tax paid per year</p>
-            <p>&pound;<span id="yearlyTax"></span></p>
-            
-        </div>
-        
-    </body>
-    
-    <script src="taxCalculator.js"></script>
-        
+    <div class="tax-bands">
+        <h2>Tax Bands</h2>
+        <table>
+            <tr>
+                <th>Band</th>
+                <th>Taxable Income</th>
+                <th>Tax Rate</th>
+            </tr>
+            <tr>
+                <td>Personal Allowance</td>
+                <td>Up to &pound;11,000</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>Basic</td>
+                <td>&pound;11,000 to &pound;43,000</td>
+                <td>20%</td>
+            </tr>
+            <tr>
+                <td>Higher Rate</td>
+                <td>&pound;43,000 to &pound;150,000</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td>Additional rate</td>
+                <td>Over &pound;150,000</td>
+                <td>45%</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<script src="taxCalculator.js"></script>
+
 
 </html>
