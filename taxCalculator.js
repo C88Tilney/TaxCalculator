@@ -5,21 +5,17 @@ document.getElementById("calculate").addEventListener("click", function tax() {
     var x = parseInt(document.getElementById("income").value);
     console.log(x);
     "use strict";
+    
 
-
-    if (x < 0) {
-        money = "You owe someone money!";
+    if (x <= 11000) {
+        money = 0;
     }
 
-    else if (x >= 0 && x < 11000) {
-        money = "You pay no tax";
-    }
-
-    else if (x >= 11000 && x < 32000) {
+    else if (x > 11000 && x <= 32000) {
         money = ((x - 11000) * 0.20);
     }
 
-    else if (x > 32001 && x < 99000) {
+    else if (x > 32000 && x <= 100000) {
         var totalTaxable = (x - 11000);
         console.log(totalTaxable);
         var moneyTaxedAtHigherRate = (x - (32000+11000));
@@ -30,8 +26,22 @@ document.getElementById("calculate").addEventListener("click", function tax() {
         console.log(higerRateAmount);
         money = (basicRateAmount + higerRateAmount);
     }
+    
+    else if (x > 100000 && x < 122000) {
+        var allowance = ((x -100000) / 2);
+        var taxFree = (11000 - allowance);
+        console.log(allowance);
+        var moneyTaxedAtHigherRate = (x - (taxFree + 32000));
+        console.log(moneyTaxedAtHigherRate);
+        var basicRateAmount = (32000 * 0.20);
+        console.log(basicRateAmount);
+        var higerRateAmount = (moneyTaxedAtHigherRate * .40);
+        console.log(higerRateAmount);
+        money = (basicRateAmount + higerRateAmount);
+        
+    }
 
-    else if (x > 100000 && x < 149999) {
+    else if (x >= 122000 && x <= 150000) {
         console.log(x);
         var moneyTaxedAtHigherRate = (x - 32000);
         console.log(moneyTaxedAtHigherRate);
@@ -42,7 +52,7 @@ document.getElementById("calculate").addEventListener("click", function tax() {
         money = (basicRateAmount + higerRateAmount);
         
     }
-    else if (x >= 150000) {
+    else if (x > 150000) {
         console.log(x);
         var moneyTaxedAtHigherRate = (150000 - 32000);
         console.log(moneyTaxedAtHigherRate);
