@@ -21,7 +21,7 @@
     <div class="title">
         <h1>Tax Calculator 2016/2017 Tax Year</h1>
     </div>
-    <!-- ***************************** -->
+    <!-- ***************************** input where the user add their salary -->
 
     <div class="input">
         <h2>Income Tax</h2>
@@ -32,17 +32,22 @@
         <input type="button" value="Calculate" id="calculate">
        
     </div>
-    <!-- ***************************** -->
+    <!-- ***************************** Output after the JS calcualtion the anwser will be placed here -->
     <div class="output">
         <h2>Tax Calculated</h2>
         <p>Total tax per year &pound;<span id="yearlyTax"></span></p>
         <p>Total tax per month &pound;<span id="monthlyTax"></span></p>
         <p>Total tax per week &pound;<span id="weeklyTax"</p>
         <p>Money you take home &pound;<span id="takeHome"</span></p>
+        
+        <p>Total National Insurance per year &pound;<span id="yearlyTax"></span></p>
+        <p>Total National Insurance per month &pound;<span id="monthlyTax"></span></p>
+        <p>Total National Insurance week &pound;<span id="weeklyTax"</p>
+        <p>Money you take home &pound;<span id="takeHome"</span></p>
 
     </div>
 
-    <!-- ***************************** -->
+    <!-- ***************************** Here are the tax bands for the 2016/17 tax year found on the gov website-->
     <div class="tax-bands">
         <h2>Tax Bands</h2>
         <table>
@@ -75,6 +80,7 @@
     </div>
 </body>
 
+<!-- the link to the JS file -->
 <script src="taxCalculator.js"></script>
 
 

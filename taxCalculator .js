@@ -7,14 +7,17 @@ document.getElementById("calculate").addEventListener("click", function tax() {
     "use strict";
     
 
-    if (x <= 11000) {
+    // no income tax
+    if (x <= 11000) { 
         money = 0;
     }
 
+    // £11000 tax free allowance then rest of money is tax to 20%
     else if (x > 11000 && x <= 32000) {
         money = ((x - 11000) * 0.20);
     }
 
+    // £11000 tax free allowance money earnt between £11000 to £32000 is tax at 20%. Money earnt above £32000 is taxed at 40%
     else if (x > 32000 && x <= 100000) {
         var totalTaxable = (x - 11000);
         console.log(totalTaxable);
@@ -27,6 +30,7 @@ document.getElementById("calculate").addEventListener("click", function tax() {
         money = (basicRateAmount + higerRateAmount);
     }
     
+    // tax taxed as before, but for every £2 you earn over £100000, £1 is taken off your £11000 tax free allowance
     else if (x > 100000 && x < 122000) {
         var allowance = ((x -100000) / 2);
         var taxFree = (11000 - allowance);
@@ -41,6 +45,7 @@ document.getElementById("calculate").addEventListener("click", function tax() {
         
     }
 
+    // no tax allowance so all your income is taxed
     else if (x >= 122000 && x <= 150000) {
         console.log(x);
         var moneyTaxedAtHigherRate = (x - 32000);
@@ -52,6 +57,8 @@ document.getElementById("calculate").addEventListener("click", function tax() {
         money = (basicRateAmount + higerRateAmount);
         
     }
+    
+    // Additional rate taxed, so any money make above £150000 is taxed at 45%
     else if (x > 150000) {
         console.log(x);
         var moneyTaxedAtHigherRate = (150000 - 32000);
@@ -64,12 +71,13 @@ document.getElementById("calculate").addEventListener("click", function tax() {
         money = (basicRateAmount + higerRateAmount + additionalRateBand);
     }
     
+    //var to calculate the monthly, weekly and money taken home for the year.
     console.log(money);
     var monthlyTax = (money/12);
     var weeklyTax = (money/52);
     var takeHome = (x-money);
     
-    
+    // output onto the HTML doc
     document.getElementById("yearlyTax").innerHTML = money.toFixed(2);
     document.getElementById("monthlyTax").innerHTML = monthlyTax.toFixed(2);
     document.getElementById("weeklyTax").innerHTML = weeklyTax.toFixed(2);

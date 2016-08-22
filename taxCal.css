@@ -25,13 +25,13 @@ h1, h2 {
     border-style: solid;
     border-radius: 25px;
     padding: 5px 20px 20px 20px;
-    margin: 5px;
-    min-width: 40%;
+    margin: auto;
+    max-width: 50%;
     height: 200px;
     text-align: center; 
     background-color: #fff;
-    display: inline-block; 
-    float: left;
+    
+   
 }
 
 @media only screen and (max-width: 693px) {
@@ -48,16 +48,12 @@ h1, h2 {
     border-radius: 25px;
     padding: 5px 20px 20px 20px;
     margin: auto;
-    min-width: 40%;
+    max-width: 50%;
     height: 200px;
     text-align: center; 
     background-color: #fff;
-    float: right;
-    display: inline-block;
     overflow: auto;
-    margin: 5px;
-    
-   
+    margin-top: 25px;
 }
 
 @media only screen and (max-width: 693px) {
@@ -80,7 +76,7 @@ h1, h2 {
     padding: 5px 20px 20px 20px;
     margin: auto;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 25px;
     max-width: 50%; 
     text-align: center;
     background-color: #fff;
