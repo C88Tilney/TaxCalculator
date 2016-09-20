@@ -5,10 +5,11 @@
     <title>Tax Calculator</title>
 
     <!-- My Custom CSS -->
-    <link href="taxCal.css" rel="stylesheet">
+    <link href="../TaxCalculator/taxCal.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 
@@ -27,9 +28,13 @@
         <h2>Income Tax</h2>
         
         <p>Please Enter Your Salary per year </p><br>
+        
         <input id="income" type="number">
         
         <input type="button" value="Calculate" id="calculate">
+        
+        <p class="demo"></p>
+        
        
     </div>
     <!-- ***************************** Output after the JS calcualtion the anwser will be placed here -->
@@ -43,43 +48,73 @@
         <p>Total National Insurance per year &pound;<span id="yearlyNI"></span></p>
         <p>Total National Insurance per month &pound;<span id="monthlyNI"></span></p>
         <p>Total National Insurance week &pound;<span id="weeklyNI"</p>
-        <p>Money you take home &pound;<span id="takeHome"</span></p>
+        <p>Money you take home per year &pound;<span id="takeHome"</span></p>
 
     </div>
 
     <!-- ***************************** Here are the tax bands for the 2016/17 tax year found on the gov website-->
     <div class="tax-bands">
         <h2>Tax Bands</h2>
-        <table>
-            <tr>
-                <th>Band</th>
-                <th>Taxable Income</th>
-                <th>Tax Rate</th>
-            </tr>
-            <tr>
-                <td>Personal Allowance</td>
-                <td>Up to &pound;11,000</td>
-                <td>0%</td>
-            </tr>
-            <tr>
-                <td>Basic</td>
-                <td>&pound;11,000 to &pound;32,000</td>
-                <td>20%</td>
-            </tr>
-            <tr>
-                <td>Higher Rate</td>
-                <td>&pound;32,001 to &pound;150,000</td>
-                <td>40%</td>
-            </tr>
-            <tr>
-                <td>Additional rate</td>
-                <td>Over &pound;150,000</td>
-                <td>45%</td>
-            </tr>
-        </table>
+        <div class="table">
+            <div class="divTableRow">
+                <div class="divTableHead">Band</div>
+                <div class="divTableHead">Taxable Income</div>
+                <div class="divTableHead">Tax Rate</div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">Personal Allowance</div>
+                <div class="divTableCell">Up to &pound;11,000</div>
+                <div class="divTableCell">0%</div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">Basic</div>
+                <div class="divTableCell">&pound;11,000 to &pound;32,000</div>
+                <div class="divTableCell">20%</div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">Higher Rate</div>
+                <div class="divTableCell">&pound;32,001 to &pound;150,000</div>
+                <div class="divTableCell">40%</div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell">Additional Rate</div>
+                <div class="divTableCell">Over &pound;150,000</div>
+                <div class="divTableCell">45%</div>
+            </div>
+        </div>
     </div>
-</body>
+    
 
+    
+ <!-- ***************************** National insureance bands gov website ********************-->
+    <div class="tax-bands">
+        <h2>National Insurance contribution</h2>
+            <div class="table">
+                <div class="divTableRow">
+                    <div class="divTableHead">Earnings (&pound; a week)</div>
+                    <div class="divTableHead">NIC rate</div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">Below &pound;112</div>
+                    <div class="divTableCell">0%</div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">&pound;112-155</div>
+                    <div class="divTableCell">0%</div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableCell">&pound;155-827</div>
+                    <div class="divTableCell">2%</div>
+                </div>
+            </div>
+    </div>
+    
+<!-- ***************************************-->
+    
+    
+</body>
+    
+    
 <!-- the link to the JS file -->
 <script src="taxCalculator.js"></script>
 
