@@ -34,31 +34,24 @@ h1, h2 {
     font-family: 'Lobster', cursive;
 }
 
-
 .title {
     max-width: 100%;
     height: auto;
     padding: 10px;
     margin: auto;
     text-align: center;
-    color: #000;
-    
+    color: #000; 
     text-align: center;
-    font-family: sans-serif;
-    
+    font-family: sans-serif; 
 }
 
 .input {
-    //border-style: solid;
     border-radius: 25px;
-    padding: 5px 20px 20px 20px;
+    padding: 5px 20px 0px 20px;
     margin: auto;
     max-width: 50%;
     height: 200px;
     text-align: center; 
-    background-color: ;
-    
-   
 }
 
 @media only screen and (max-width: 693px) {
@@ -71,14 +64,12 @@ h1, h2 {
 }
 
 .output {
-    //border-style: solid;
     border-radius: 25px;
-    padding: 5px 20px 20px 20px;
+    padding: 0px 20px 0px 20px;
     margin: auto;
     max-width: 50%;
     height: 320px;
     text-align: center; 
-    //background-color: #fff;
     overflow: auto;
     margin-top: 25px;
 }
@@ -97,7 +88,17 @@ h1, h2 {
 }
 
 .tax-bands {
-    //border-style: solid;
+    border-radius: 25px;
+    padding: 5px 20px 0px 20px;
+    margin: auto;
+    margin-bottom: 0px;
+    margin-top: 25px;
+    max-width: 50%; 
+    text-align: center;
+    clear: both;  
+}
+
+.insurance {
     border-radius: 25px;
     padding: 5px 20px 20px 20px;
     margin: auto;
@@ -105,9 +106,7 @@ h1, h2 {
     margin-top: 25px;
     max-width: 50%; 
     text-align: center;
-    //background-color: #fff;
-    clear: both;
-    
+    clear: both; 
 }
 
 .h2 {
@@ -138,7 +137,6 @@ h1, h2 {
 .divTableCell {
     display: table-cell;
     width: 33%;
-    background: ; 
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -148,6 +146,10 @@ h1, h2 {
 
 @media only screen and (max-width: 693px) {
     .tax-bands {
+        margin: 20px 5px 0px 5px;
+        max-width: 100%;
+    }
+    .insurance {
         margin: 20px 5px 0px 5px;
         max-width: 100%;
     }
@@ -181,6 +183,5 @@ h1, h2 {
 
 #income {
     border-radius: 5px;
-    padding: 5px;
-   
+    padding: 5px;  
 }
