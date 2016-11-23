@@ -1,6 +1,33 @@
+html {
+    margin: 0;
+    padding : 0;
+    display: block;
+    position: relative;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: lightblue;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+body::after {
+  content: "";
+  background: url(pennies.jpg) center scroll;
+  opacity: 0.5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover; 
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 h1, h2 {
@@ -15,21 +42,21 @@ h1, h2 {
     margin: auto;
     text-align: center;
     color: #000;
-    background-color: red;
+    
     text-align: center;
     font-family: sans-serif;
-    background-color: lightblue;
+    
 }
 
 .input {
-    border-style: solid;
+    //border-style: solid;
     border-radius: 25px;
     padding: 5px 20px 20px 20px;
     margin: auto;
     max-width: 50%;
     height: 200px;
     text-align: center; 
-    background-color: #fff;
+    background-color: ;
     
    
 }
@@ -44,14 +71,14 @@ h1, h2 {
 }
 
 .output {
-    border-style: solid;
+    //border-style: solid;
     border-radius: 25px;
     padding: 5px 20px 20px 20px;
     margin: auto;
     max-width: 50%;
     height: 320px;
     text-align: center; 
-    background-color: #fff;
+    //background-color: #fff;
     overflow: auto;
     margin-top: 25px;
 }
@@ -70,15 +97,15 @@ h1, h2 {
 }
 
 .tax-bands {
-    border-style: solid;
+    //border-style: solid;
     border-radius: 25px;
     padding: 5px 20px 20px 20px;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     margin-top: 25px;
     max-width: 50%; 
     text-align: center;
-    background-color: #fff;
+    //background-color: #fff;
     clear: both;
     
 }
@@ -97,9 +124,6 @@ h1, h2 {
     width: 100%;
 }
 
-.divTableRow:nth-child(even) {
-    background-color: #f2f2f2;
-}
 
 .divTableHead {
     display: table-cell;
@@ -124,7 +148,39 @@ h1, h2 {
 
 @media only screen and (max-width: 693px) {
     .tax-bands {
-        margin: 20px 5px 20px 5px;
+        margin: 20px 5px 0px 5px;
         max-width: 100%;
     }
+}
+
+#calculate {
+    background-color: transparent;
+    color: #000;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    -moz-transition-duration: 0.4s;  
+    transition-duration: 0.4s;
+}
+
+#calculate:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    -moz-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    -webkit-box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: white;
+    color: #000;
+    border: lightblue;
+    
+}
+
+#income {
+    border-radius: 5px;
+    padding: 5px;
+   
 }
